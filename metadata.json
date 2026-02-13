@@ -1,0 +1,7 @@
+{
+  "name": "Amar Dari Palla Frame Studio",
+  "description": "Create stunning framed photos with custom text and AI-powered captions. Perfect for social media and profile pictures.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
