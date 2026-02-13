@@ -132,7 +132,7 @@ const App: React.FC = () => {
       </main>
 
       <input type="file" ref={fileInputRef} onChange={handleFileChange} accept="image/*" className="hidden" />
-      <p className="text-center my-2 font-semibold">Develop By <a className="text-blue-800" href="https://shihab-dev.web.app/" target="_blank">Shihab Uddin</a></p>
+      <p className="text-center my-2 font-semibold">Developed By <a className="text-blue-800" href="https://shihab-dev.web.app/" target="_blank">Shihab Uddin</a></p>
     </div>
   );
 };

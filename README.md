@@ -1,5 +1,4 @@
 # 🖼️ Olynex Pitha Frame
-**Developed by Shihab Uddin**
 
 Olynex Pitha Frame is a sleek, React-based web application that allows users to upload personal photos, apply custom decorative frames, and perform real-time adjustments (cropping, scaling, and rotating) before downloading a high-resolution version for social media or personal use.
 
@@ -62,6 +61,4 @@ src/
 
 ---
 
-**Developed with ❤️ by [Shihab Uddin**](https://shihab-dev.web.app/)
-
-```
+**Developed with ❤️ by [Shihab Uddin**](https://shihab-dev.web.app/)**
