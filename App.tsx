@@ -7,6 +7,7 @@ import frame1 from "./assets/frame1.png";
 import frame2 from "./assets/frame2.png";
 import frame3 from "./assets/frame3.png";
 import frame4 from "./assets/frame4.png";
+import Marquee from "react-fast-marquee";
 
 const frames = [
   { id: "f1", src: frame1, label: "Classic" },
@@ -67,11 +68,14 @@ const App: React.FC = () => {
           Download
         </button>
       </header>
+      <Marquee className="bg-slate-100 py-1 text-xl" pauseOnHover>
+     আজ ১৪ ফেব্রুয়ারি অলিনেক্স পিঠা উৎসব 🌸 ভালোবাসা আর ঐতিহ্যের মিলনমেলা 💕 এখনই আপনার ছবি আপলোড করে বিশেষ ফ্রেমে সাজিয়ে নিন 📷
+      </Marquee>
 
       <main className="max-w-6xl mx-auto w-full p-6 grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Left: Editor */}
         <div className="lg:col-span-7 space-y-6">
-          <div className="aspect-square bg-white rounded-3xl shadow-xl overflow-hidden relative border-4 border-white">
+          <div className="aspect-square bg-white rounded-3xl shadow-sm overflow-hidden relative border-4 border-white">
             <FramePreview
               imageState={imageState}
               frameImg={selectedFrame}
@@ -128,6 +132,13 @@ const App: React.FC = () => {
               ))}
             </div>
           </div>
+          <button
+            onClick={handleDownload}
+            disabled={!imageState.src}
+            className="bg-indigo-600 text-white px-6 py-2 w-full rounded-xl font-semibold disabled:opacity-30"
+          >
+            Download
+          </button>
         </div>
       </main>
 
