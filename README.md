@@ -61,4 +61,4 @@ src/
 
 ---
 
-**Developed with ❤️ by [Shihab Uddin**](https://shihab-dev.web.app/)**
+**Developed with ❤️ by [Shihab Uddin](https://shihab-dev.web.app/)**

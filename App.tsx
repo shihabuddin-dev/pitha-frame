@@ -59,7 +59,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
       <header className="bg-white border-b px-6 py-4 flex justify-between items-center sticky top-0 z-50">
-        <h1 className="text-xl font-black text-indigo-600">Pitha Frame</h1>
+        <h1 className="text-xl font-black text-indigo-600 text-upercase">PITHA FRAME</h1>
         <button
           onClick={handleDownload}
           disabled={!imageState.src}
@@ -69,7 +69,7 @@ const App: React.FC = () => {
         </button>
       </header>
       <Marquee className="bg-slate-100 py-1 text-xl" pauseOnHover>
-     আজ ১৪ ফেব্রুয়ারি অলিনেক্স পিঠা উৎসব 🌸 ভালোবাসা আর ঐতিহ্যের মিলনমেলা 💕 এখনই আপনার ছবি আপলোড করে বিশেষ ফ্রেমে সাজিয়ে নিন 📷
+        আজ ১৪ ফেব্রুয়ারি অলিনেক্স পিঠা উৎসব 🌸 ভালোবাসা আর ঐতিহ্যের মিলনমেলা 💕 এখনই আপনার ছবি আপলোড করে বিশেষ ফ্রেমে সাজিয়ে নিন 📷
       </Marquee>
 
       <main className="max-w-6xl mx-auto w-full p-6 grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -115,7 +115,7 @@ const App: React.FC = () => {
         </div>
 
         {/* Right: Frame Selection */}
-        <div className="lg:col-span-5 space-y-6">
+        <div className="lg:col-span-5 space-y-4">
           <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
             <h3 className="font-bold mb-4">Choose Frame Style</h3>
             <div className="grid grid-cols-2 gap-4">
@@ -132,6 +132,13 @@ const App: React.FC = () => {
               ))}
             </div>
           </div>
+          <button
+            onClick={() => fileInputRef.current?.click()}
+            disabled={!imageState.src}
+            className="bg-slate-200 text-slate-700 px-6 py-2 w-full rounded-xl font-semibold disabled:opacity-30 hover:bg-slate-300 transition-colors"
+          >
+            Change Photo
+          </button>
           <button
             onClick={handleDownload}
             disabled={!imageState.src}
