@@ -58,7 +58,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
       <header className="bg-white border-b px-6 py-4 flex justify-between items-center sticky top-0 z-50">
-        <h1 className="text-xl font-black text-indigo-600">Pitha</h1>
+        <h1 className="text-xl font-black text-indigo-600">Pitha Frame</h1>
         <button
           onClick={handleDownload}
           disabled={!imageState.src}
@@ -80,7 +80,7 @@ const App: React.FC = () => {
             />
             {!imageState.src && (
               <div className="absolute inset-0 flex items-center justify-center bg-slate-100">
-                <button 
+                <button
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-white px-6 py-3 rounded-xl shadow-md font-bold text-indigo-600"
                 >
@@ -100,11 +100,11 @@ const App: React.FC = () => {
                 onChange={(e) => setImageState(p => ({ ...p, scale: parseFloat(e.target.value) }))}
                 className="flex-grow"
               />
-              <button 
+              <button
                 onClick={() => setImageState(p => ({ ...p, rotation: p.rotation + 90 }))}
                 className="p-2 bg-slate-100 rounded-lg"
               >
-                Rotate ↻
+                <span className="hidden md:inline">Rotate</span> ↻
               </button>
             </div>
           )}
@@ -119,9 +119,8 @@ const App: React.FC = () => {
                 <button
                   key={f.id}
                   onClick={() => setSelectedFrame(f.src)}
-                  className={`relative p-2 rounded-xl border-2 transition-all ${
-                    selectedFrame === f.src ? "border-indigo-500 bg-indigo-50" : "border-slate-100"
-                  }`}
+                  className={`relative p-2 rounded-xl border-2 transition-all ${selectedFrame === f.src ? "border-indigo-500 bg-indigo-50" : "border-slate-100"
+                    }`}
                 >
                   <img src={f.src} alt={f.label} className="w-full aspect-square object-contain" />
                   <span className="text-[10px] font-bold uppercase mt-1 block">{f.label}</span>
@@ -133,6 +132,7 @@ const App: React.FC = () => {
       </main>
 
       <input type="file" ref={fileInputRef} onChange={handleFileChange} accept="image/*" className="hidden" />
+      <p className="text-center my-2 font-semibold">Develop By <a className="text-blue-800" href="https://shihab-dev.web.app/" target="_blank">Shihab Uddin</a></p>
     </div>
   );
 };
